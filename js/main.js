@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     const typingText = document.querySelector('.typing-text');
     const texts = [
-        'Programmer Analyst Trainee',
+        'Data Engineer',
+        'Machine Learning Developer',
         'Full Stack Developer',
-        'Problem Solver',
-        'Tech Enthusiast',
-        'Future Architect'
+        'Aspiring Data Scientist',
+        'Problem Solver'
     ];
     let textIndex = 0;
     let charIndex = 0;
