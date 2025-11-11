@@ -489,53 +489,84 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ==========================================
-    // 15. COPY EMAIL ON CLICK
+    // 15. EMAIL LINKS - OPEN EMAIL APP & COPY EMAIL
     // ==========================================
-    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
-    
-    emailLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const email = link.textContent;
-            
+    // Global function for copy email (can be called from onclick)
+    window.copyEmailToClipboard = function() {
+        const email = 'alok85820018@gmail.com';
+        const copyBtn = document.querySelector('.copy-email-btn');
+        
+        // Try modern clipboard API first
+        if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(email).then(() => {
-                // Show tooltip
-                const tooltip = document.createElement('div');
-                tooltip.textContent = 'Email copied!';
-                tooltip.style.cssText = `
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: var(--primary-color);
-                    color: white;
-                    padding: 1rem 2rem;
-                    border-radius: 0.5rem;
-                    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-                    z-index: 10000;
-                    animation: fadeInOut 2s ease;
-                `;
-                
-                document.body.appendChild(tooltip);
+                if (copyBtn) {
+                    const originalHTML = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    copyBtn.style.background = '#10b981';
+                    
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalHTML;
+                        copyBtn.style.background = '';
+                    }, 2000);
+                }
+            }).catch(err => {
+                console.error('Clipboard API failed:', err);
+                fallbackCopy(email, copyBtn);
+            });
+        } else {
+            fallbackCopy(email, copyBtn);
+        }
+    };
+    
+    // Fallback copy method
+    function fallbackCopy(text, btn) {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '0';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+            const successful = document.execCommand('copy');
+            if (successful && btn) {
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.background = '#10b981';
                 
                 setTimeout(() => {
-                    tooltip.remove();
+                    btn.innerHTML = originalHTML;
+                    btn.style.background = '';
                 }, 2000);
-            });
-        });
-    });
-    
-    // Add fadeInOut animation
-    const fadeAnimation = document.createElement('style');
-    fadeAnimation.textContent = `
-        @keyframes fadeInOut {
-            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-            15% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-            85% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            }
+        } catch (err) {
+            console.error('Fallback copy failed:', err);
+            alert('Please copy manually: alok85820018@gmail.com');
         }
-    `;
-    document.head.appendChild(fadeAnimation);
+        
+        document.body.removeChild(textArea);
+    }
+    
+    // Make email text clickable to open email app
+    const emailText = document.querySelector('.contact-email-text');
+    if (emailText) {
+        emailText.style.cursor = 'pointer';
+        emailText.addEventListener('click', () => {
+            window.location.href = 'mailto:alok85820018@gmail.com';
+        });
+    }
+    
+    // Add event listener to copy button as well
+    const copyEmailBtn = document.querySelector('.copy-email-btn');
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.copyEmailToClipboard();
+        });
+    }
 
     // ==========================================
     // 16. PRINT RESUME TRACKING
