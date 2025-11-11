@@ -1,0 +1,60 @@
+# .gitignore
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor Directories and Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Node Modules (if you add Node.js later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
+
+# Personal Files (you may want to keep these private)
+# Uncomment if needed:
+# assets/resume.pdf
+# images/profile.jpg
+
+# Build Output (if you add a build process)
+dist/
+build/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# Package Manager Lock Files (optional)
+# package-lock.json
+# yarn.lock
+
+# Backup Files
+*.bak
+*.backup
