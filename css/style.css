@@ -1877,7 +1877,68 @@ p {
 }
 
 /* ==========================================
-   17. ANIMATIONS
+   17. GITHUB STATS & CODING PROFILES
+   ========================================== */
+.github-stats-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.github-stats-grid > div {
+    transition: transform var(--transition-base);
+}
+
+.github-stats-grid > div:hover {
+    transform: translateY(-5px);
+}
+
+.coding-profile-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .coding-profile-card {
+    background: var(--bg-tertiary);
+}
+
+.coding-profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-2xl);
+}
+
+.coding-profile-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.coding-profile-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.coding-profile-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 1.5rem 0;
+}
+
+.coding-profile-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.coding-profile-card .btn {
+    margin-top: 1rem;
+}
+
+/* ==========================================
+   18. ANIMATIONS
    ========================================== */
 @keyframes spin {
     to { transform: rotate(360deg); }
