@@ -7,15 +7,37 @@ This folder contains all image assets for the portfolio website.
 Please add the following images to this folder:
 
 ### Profile Images
-- **profile.jpg** - Your professional photo for the About section (recommended: 600x800px)
+- **alok.jpg** - Your professional photo (Alok Kumar) for the About/Hero section (recommended: 600x800px, portrait orientation)
 - **favicon.png** - Small icon for browser tab (recommended: 32x32px or 64x64px)
 
 ### Project Screenshots
-- **project1.jpg** - Smart Attendance System screenshot (recommended: 800x600px)
-- **project2.jpg** - Task Manager App screenshot (recommended: 800x600px)
-- **project3.jpg** - Portfolio Website screenshot (recommended: 800x600px)
-- **project4.jpg** - Weather Dashboard screenshot (recommended: 800x600px)
-- **project5.jpg** - Chatbot Assistant screenshot (recommended: 800x600px)
+Upload these 6 project images with exact filenames:
+
+1. **liver-cirrhosis.jpg** - Liver Cirrhosis Detection ML model screenshot (recommended: 800x600px)
+   - Show: Model architecture diagram, accuracy metrics, or confusion matrix
+   
+2. **shopping-karo.jpg** - Shopping Karo E-commerce Frontend screenshot (recommended: 800x600px)
+   - Show: Product listing page or shopping cart interface
+   
+3. **faceattendai.jpg** - FaceAttendAI Face Recognition Attendance System screenshot (recommended: 800x600px)
+   - Show: Face detection interface or admin dashboard
+   
+4. **the-god-ai.jpg** - The God AI Interview Co-Pilot screenshot (recommended: 800x600px)
+   - Show: Overlay interface or dashboard with AI assistance
+   
+5. **portfolio.jpg** - This Portfolio Website screenshot (recommended: 800x600px)
+   - Show: Homepage or full portfolio layout
+
+6. **myflat.jpg** - My-flat Real Estate & Flatmate Platform screenshot (recommended: 800x600px)
+   - Show: Property listings, search interface, or Google Maps integration
+
+**Alternative Names (if you prefer):**
+- project1.jpg (Liver Cirrhosis)
+- project2.jpg (Shopping Karo)
+- project3.jpg (FaceAttendAI)
+- project4.jpg (The God AI)
+- project5.jpg (Portfolio Website)
+- project6.jpg (My-flat)
 
 ### Blog Thumbnails
 - **blog1.jpg** - Blog post 1 thumbnail (recommended: 800x600px)
