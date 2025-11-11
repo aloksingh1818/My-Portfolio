@@ -943,14 +943,28 @@ p {
 .skill-icon.java { background: #f8fafc; color: #007396; }
 .skill-icon.python { background: #fef3c7; color: #3776AB; }
 .skill-icon.javascript { background: #fef3c7; color: #F7DF1E; }
+.skill-icon.cpp { background: #e0f2fe; color: #044e99; }
+.skill-icon.sql { background: #f0f9ff; color: #0369a1; }
 .skill-icon.html { background: #fef2f2; color: #E34F26; }
 .skill-icon.css { background: #eff6ff; color: #1572B6; }
 .skill-icon.react { background: #ecfeff; color: #61DAFB; }
 .skill-icon.node { background: #f0fdf4; color: #339933; }
+.skill-icon.flask { background: #f8fafc; color: #000000; }
 .skill-icon.git { background: #fef2f2; color: #F05032; }
 .skill-icon.vscode { background: #eff6ff; color: #007ACC; }
 .skill-icon.postman { background: #fff7ed; color: #FF6C37; }
 .skill-icon.jira { background: #eff6ff; color: #0052CC; }
+.skill-icon.ml { background: #faf5ff; color: #7c3aed; }
+.skill-icon.tensorflow { background: #fff7ed; color: #FF6F00; }
+.skill-icon.pytorch { background: #fef2f2; color: #EE4C2C; }
+.skill-icon.pandas { background: #eff6ff; color: #150458; }
+.skill-icon.aws { background: #fff7ed; color: #FF9900; }
+.skill-icon.snowflake { background: #ecfeff; color: #29B5E8; }
+.skill-icon.mysql { background: #eff6ff; color: #4479A1; }
+.skill-icon.azure { background: #eff6ff; color: #0078D4; }
+.skill-icon.powerbi { background: #fef9c3; color: #F2C811; }
+.skill-icon.jupyter { background: #fff7ed; color: #F37726; }
+.skill-icon.excel { background: #f0fdf4; color: #217346; }
 
 .skill-card h4 {
     font-size: 1.125rem;
